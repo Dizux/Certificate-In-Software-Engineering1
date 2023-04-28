@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #know your customer form app
     'kyc',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [

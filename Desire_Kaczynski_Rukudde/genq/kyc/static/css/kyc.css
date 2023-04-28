@@ -1,0 +1,33 @@
+#flash_message{
+    background: aliceblue;
+    width: 60%;
+    text-align: center;
+    margin:1% 20%;
+    padding-top: 5px;
+}
+#flash_message li{
+    display: inline;
+}
+.col{
+    border: solid;
+}
+.table col{
+    padding: 10px;
+}
+#form_div{
+    margin-left: 120px;
+    margin-right: 120px;
+    align-items: center;
+}
+form {
+    width: 40%;
+    margin: 0 auto;
+}
+#message_box{
+    padding-bottom: 150px;
+}
+.btn-color{
+
+    background-color: #E91E63; /* set starting background color */
+    animation: change-colors 3s infinite; /* apply animation */
+  }

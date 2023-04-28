@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block content%}
+{% load static %}
+
+<br><br>
+<form action="" method="POST" class="form-control" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <h2>Bio Data</h2>
+    <hr style="height: 10px;">
+    <div class="container-fluid">
+        <div class="col-md-12 row">
+            <div class="col-md-6">
+                <input class="col-md-6 form-control" type="text" minlength="2" maxlength="255" placeholder="First Name" name="firstname" required>
+            </div>
+            <div class="col-md-6">
+                <input class="col-md-6 form-control" type="text" minlength="2" maxlength="255" placeholder="Last Name" name="lastname" required>
+            </div>
+            <div class="col-md-12 row" style="margin: 5px;"></div>
+            <div class="col-md-6">
+                <input class="col-md-6 form-control" type="date" placeholder="Date Of birth (DD/MM/YYYY)" name="dob" required>
+            </div>
+            <div class="col-md-6">
+                <select class="col-md-6 form-control" placeholder="--Select Gender--" name="gender" required>
+                    <option value="" selected disabled hidden>--Select Gender--</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 row" style="margin: 5px;"></div>
+    <h2>Location</h2>
+    <hr style="height: 10px;">
+    <div class="container-fluid">
+        <div class="col-md-12 row">
+            <div class="col-md-6">
+                <select class="col-md-6 form-control" placeholder="--Select Country--" name="country" required>
+                    <option value="" selected disabled hidden>--Select Country--</option>
+                    <option value="Male">Uganda</option>
+                    <option value="Female">Kenya</option>
+                    <option value="Female">Tanzania</option>
+                    <option value="Female">Rwanda</option>
+                    <option value="Female">Burundi</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <input class="col-md-6 form-control" type="text" minlength="2" maxlength="255" placeholder="State / District" name="state_or_district" required>
+            </div>
+            <div class="col-md-12 row" style="margin: 5px;"></div>
+            <div class="col-md-6">
+                <input class="col-md-6 form-control" type="text" minlength="2" maxlength="255" placeholder="Town" name="town" required>
+            </div>
+            <div class="col-md-6">
+                <input class="col-md-6 form-control" type="text" placeholder="Zip Code" name="zip_code" required>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 row" style="margin: 5px;"></div>
+    <h2>Contacts and Address</h2>
+    <hr style="height: 10px;">
+    <div class="container-fluid">
+        <div class="col-md-12 row">
+            <div class="col-md-6">
+                <input class="col-md-6 form-control" type="number" placeholder="Phone Number 1" name="phone_number1" required>
+            </div>
+            <div class="col-md-6">
+                <input class="col-md-6 form-control" type="number" placeholder="Phone Number 2" name="phone_number2" required>
+            </div>
+            <div class="col-md-12 row" style="margin: 5px;"></div>
+            <div class="col-md-12">
+                <input class="col-md-6 form-control" type="email" placeholder="Email" name="email" required>
+            </div>
+        </div>
+        <div class="col-md-12 row" style="margin: 5px;"></div>
+        <div class="col-md-12 row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <button class="col-md-12 btn btn-warning" type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+{% endblock %}
