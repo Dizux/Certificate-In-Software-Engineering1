@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import FormData
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
@@ -34,5 +35,7 @@ def capture_message(request):
     )
     captured_details.save()
     chats = FormData.objects.all()
+    messages.success(request, ("Form has been submitted successfully!"))  
+        
 
     return render(request, 'index.html')#{'messages':messages})

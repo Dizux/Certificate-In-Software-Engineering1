@@ -9,6 +9,7 @@
         {% bootstrap_css %}
         {% bootstrap_javascript %}
         <link rel="stylesheet" href="{% static 'css/kyc.css' %}">
+        <script src="{% static 'js/kyc.js' %}"></script>
     </head>
     <body>
         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -28,7 +29,9 @@
 
             
             {% if messages %}
+            <div class="col-md-12">
             <div id="flash_message" class="container-fluid">
+                
                 <ul class="messages">
                     {% for message in messages %}
                     <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
@@ -37,7 +40,9 @@
                     {% endfor %}
 
                 </ul>
-                <button class="btn btn-outline-danger" onclick="hide('flash_message')">Close</button>
+                <button class="btn btn-outline-light" onclick="hide('flash_message')">Close</button>
+                <br><br>
+            </div>
             </div>
             {% endif %}
         
@@ -51,7 +56,7 @@
             <div class="col-md-12">
                 <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <p id="footer_txt">&copy;<b>Designed by Desire.</b></p>
+                        <p id="footer_txt">&copy;<b>Designed by Desire Kaczynski Rukud'de.</b></p>
                     </div>
                 <div class="col-md-4"></div>
             </div>
